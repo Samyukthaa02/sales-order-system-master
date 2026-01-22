@@ -15,27 +15,27 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>21</java.version>
 		<spring.version>6.0.8</spring.version>
-        <spring.data.version>1.11.23.RELEASE</spring.data.version>
-        <spring.security.version>5.2.10.RELEASE</spring.security.version>
+        <spring.data.version>3.2.0</spring.data.version>
+        <spring.security.version>6.2.0</spring.security.version>
 		<junit.version>4.13.1</junit.version>
         <assertj.version>3.4.1</assertj.version> <!-- use 2.4.1 for Java 7 projects -->
 		<mockito.version>1.10.19</mockito.version>
-		<servlet.version>3.1.0</servlet.version>
+		<jakarta.servlet.version>6.0.0</jakarta.servlet.version>
 		<jstl.version>1.2</jstl.version>
-		<bean.validation.version>1.1.0.Final</bean.validation.version>
+		<jakarta.validation.version>3.0.0</jakarta.validation.version>
 		<mysql.version>8.0.28</mysql.version>
-		<hibernate.core.version>5.4.24.Final</hibernate.core.version>
-		<hibernate.entitymanager.version>4.3.10.Final</hibernate.entitymanager.version>
+		<hibernate.core.version>6.2.0.Final</hibernate.core.version>
 		<hibernate.c3po.version>4.3.10.Final</hibernate.c3po.version>
-		<hibernate.validator.version>5.3.6.Final</hibernate.validator.version>
+		<hibernate.validator.version>8.0.0.Final</hibernate.validator.version>
 		<slf4j-log4j12.version>1.6.1</slf4j-log4j12.version>
 		<dandelion.datatables.version>1.0.0</dandelion.datatables.version>
 		<hsqldb.version>2.7.1</hsqldb.version>
 		<h2.version>2.2.220</h2.version>
 		<derby.version>10.14.2.0</derby.version>
         <lombok.version>1.16.8</lombok.version>
+        <jakarta.el.version>4.0.2</jakarta.el.version>
 	</properties>
 
 	<dependencies>
@@ -125,11 +125,11 @@
         </dependency>
 
 
-		<!-- Java EE Servlet API -->
+		<!-- Jakarta EE Servlet API -->
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>${servlet.version}</version>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>${jakarta.servlet.version}</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -142,9 +142,9 @@
 
 		<!-- Bean Validation -->
  	     <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>${bean.validation.version}</version>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>${jakarta.validation.version}</version>
             <!--  <scope>provided</scope> -->
          </dependency>
 
@@ -157,16 +157,9 @@
 
 		<!-- Hibernate dependency -->
 		<dependency>
-			<groupId>org.hibernate</groupId>
+			<groupId>org.hibernate.orm</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate.core.version}</version>
-		</dependency>
-
-		<!-- for Hibernate - JPA -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>${hibernate.entitymanager.version}</version>
 		</dependency>
 
 		<!-- For connection pooling (c3p0) -->
@@ -178,15 +171,15 @@
 
 		<!-- Hibernate Validator (Bean Validation RI) -->
 		<dependency>
-			<groupId>org.hibernate</groupId>
+			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator</artifactId>
 			<version>${hibernate.validator.version}</version>
 		</dependency>
 
         <dependency>
             <groupId>org.glassfish</groupId>
-            <artifactId>javax.el</artifactId>
-            <version>3.0.0</version>
+            <artifactId>jakarta.el</artifactId>
+            <version>${jakarta.el.version}</version>
             <scope>test</scope>
         </dependency>
 
