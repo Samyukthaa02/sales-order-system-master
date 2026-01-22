@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -16,9 +15,9 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <spring.version>5.3.18</spring.version>
-        <cucumberJava.version>1.2.3</cucumberJava.version>
-        <cucumberJunit.version>1.2.3</cucumberJunit.version>
+        <spring.version>6.0.8</spring.version>
+        <cucumberJava.version>7.11.2</cucumberJava.version>
+        <cucumberJunit.version>7.11.2</cucumberJunit.version>
         <online.application.version>1.0-SNAPSHOT</online.application.version>
     </properties>
 
@@ -45,20 +44,13 @@
 
         <!-- Cucumber-JVM -->
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>${cucumberJava.version}</version>
         </dependency>
 
-        <!-- <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-java8</artifactId>
-            <version>1.2.3</version>
-            <scope>test</scope>
-        </dependency> -->
-
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>${cucumberJunit.version}</version>
         </dependency>
