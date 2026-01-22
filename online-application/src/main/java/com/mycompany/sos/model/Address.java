@@ -82,7 +82,7 @@ public class Address {
 	private String country;
 
 	// 1 : M
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "customers")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "address")
 	private Set<Customer> customers = new HashSet<>(0);
 
 }
